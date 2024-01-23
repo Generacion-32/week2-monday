@@ -8,11 +8,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/about-us', (req, res) => {
-    res.send('Sobre nosotros')
+    res.render('about-us')
+
 })
 
 router.get('/services', (req, res) => {
-    res.send('Nuestros servicios cumplen con las mas altas pruebas de estadares')
+    res.render('services')
 })
 
 router.get('/services/:id', (req, res) => {
@@ -25,11 +26,11 @@ router.get('/services/:id', (req, res) => {
 
 
 router.get('/about-me', (req, res) => {
-    res.send('Sobre mi')
+    res.render('about-me')
 })
 
 router.get('/projects', (req, res) => {
-    res.send('Estos son mis proyectos')
+    res.render('projects')
 })
 
 
