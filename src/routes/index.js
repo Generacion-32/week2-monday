@@ -4,7 +4,7 @@ const router = express.Router();
 // colocar las rutas aquí
 router.get('/', (req, res) => {
     // res.send("Home - Bienvenidos TecnoSoluciones g-32");
-    res.send('Bienvenidos a mi portafolio')
+    res.render('home')
 });
 
 router.get('/about-us', (req, res) => {
