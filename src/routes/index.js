@@ -24,7 +24,9 @@ router.get('/services/:id', (req, res) => {
     //const id = req.params.id
     //console.log(id);
     // res.send(`Servicio de id = ${id}`)
-    res.render('service-id', { id })
+    const service = services.find((service) => service.id === parseInt(id))
+    //console.log(service);
+    res.render('service-id', { service })
 })
 
 
@@ -42,7 +44,8 @@ router.get('/projects', (req, res) => {
 router.get('/project_id/:id', (req, res) => {
     // const { id } = req.params
     const id = req.params.id
-    res.render('project_id', { id })
+    const project = projects.find((project) => project.id === parseInt(id))
+    res.render('project_id', { project })
 })
 
 
