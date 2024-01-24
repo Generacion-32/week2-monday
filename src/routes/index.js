@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const services = require('../services.json')
+const projects = require('../projects.json')
 
 // colocar las rutas aquí
 router.get('/', (req, res) => {
@@ -13,14 +15,16 @@ router.get('/about-us', (req, res) => {
 })
 
 router.get('/services', (req, res) => {
-    res.render('services')
+    //console.log(services);
+    res.render('services', { services })
 })
 
 router.get('/services/:id', (req, res) => {
     const { id } = req.params
     //const id = req.params.id
     //console.log(id);
-    res.send(`Servicio de id = ${id}`)
+    // res.send(`Servicio de id = ${id}`)
+    res.render('service-id', { id })
 })
 
 
@@ -30,14 +34,15 @@ router.get('/about-me', (req, res) => {
 })
 
 router.get('/projects', (req, res) => {
-    res.render('projects')
+    //console.log(projects);
+    res.render('projects', { projects })
 })
 
 
 router.get('/project_id/:id', (req, res) => {
     // const { id } = req.params
     const id = req.params.id
-    res.send(`Este es el proyecto de id = ${id}`)
+    res.render('project_id', { id })
 })
 
 

@@ -1,3 +1,9 @@
 <h2>projects</h2>
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias odio mollitia repellat, aliquam est atque rerum quo
   consectetur provident dolores?</p>
+
+{{#each projects}}
+<ul>
+  <li><a href="/project_id/{{this.id}}">{{this.name}}</a></li>
+</ul>
+{{/each}}

@@ -1,1 +1,8 @@
 <h2>Nuestros servicios cumplen con las mas altas pruebas de estadares</h2>
+
+{{#each services}}
+
+<ul>
+  <li><a href="/services/{{this.id}}">{{this.name}}</a></li>
+</ul>
+{{/each}}
